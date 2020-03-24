@@ -3,7 +3,7 @@
 {% block content %}
 <div class="row">
     {% for product in products %}
-        <div class = "col-12">
+        <div class = "col-md-3">
              <div class="card">
                     <img class="card-img-top" src='{{ MEDIA_URL }}{{ product.image }}'>
                 <div class="card-body">
@@ -21,15 +21,19 @@
                             </span>
                         </div>
                     </form>
-                </div>    
-            
+                </div>      
+             </div>
+        </div>
+
+         <div class="col-md-9">
+                <p>dfgdfgfgdfgdfgdf</p>
          </div>
     {% endfor %}
 </div>
 
 <div class="row">
-<div class="col-2">
-<h1> erjrehferhfberhhgfhgfjhgfgfgfdgfdgfdgfbg</h1>
-</div>
+    <div class="col-2 text-wrap">
+        erjre  hf erhfb berhh gfbhgf jhgfgf  gfd gfdgf dgfbg
+    </div>
 </div>
 {% endblock %}
