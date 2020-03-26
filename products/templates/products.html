@@ -2,38 +2,33 @@
 
 {% block content %}
 <div class="row">
-    {% for product in products %}
-        <div class = "col-md-3">
-             <div class="card">
+  
+       {% for product in products %}
+        <div class = "col-sm-12 col-md-4 col-lg-3">
+             <div class="card mb-0 h-100">
                     <img class="card-img-top" src='{{ MEDIA_URL }}{{ product.image }}'>
                 <div class="card-body">
                     
                     <h3 class="card-title">{{ product.name }}</h3>
                     <p class="card-text">{{ product.description }}</p>
-                    <p>{{ product.price }}</p>
+                    <p>Price: <i class="fa fa-eur" aria-hidden="true"></i>{{ product.price }}</p>
 
                     <form method="post" action="{% url 'add_to_cart' product.id %}">
                         {% csrf_token %}
-                        <div class="input-group">
-                            <input name="quantity" type="number" min="1" max="999" class="form-control" placeholder="Quantity">
-                            <span class="input-group-btn">
-                                <button class="btn btn-success" type="submit">Add</button>
-                            </span>
+                        <div class="form-group mx-sm-3 mb-2">
+                            <input name="quantity" type="number" min="0" max="{{product.stock}}" value="0" class="form-control" placeholder="Quantity" >
+                            
                         </div>
+                            <button class="btn-sm btn-primary" type="submit" name="select" value="add">Add to Cart</button>
+                            <button class="btn-sm btn-danger" type="submit" name="select" value="remove">Remove from Cart</button>
+                            
                     </form>
+
                 </div>      
-             </div>
+             </div>  
         </div>
-
-         <div class="col-md-9">
-                <p>dfgdfgfgdfgdfgdf</p>
-         </div>
-    {% endfor %}
+        {% endfor %}
+    
 </div>
 
-<div class="row">
-    <div class="col-2 text-wrap">
-        erjre  hf erhfb berhh gfbhgf jhgfgf  gfd gfdgf dgfbg
-    </div>
-</div>
 {% endblock %}

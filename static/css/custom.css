@@ -1,6 +1,10 @@
+
+@import url('https://fonts.googleapis.com/css?family=Londrina+Solid&display=swap');
+
 body {
-    font-family: Arial;
-    padding-top: 50px;
+    font-family: 'Londrina Solid', cursive;
+    background-color:white;
+    /* padding-top: 100px; */
 }
 
 footer {

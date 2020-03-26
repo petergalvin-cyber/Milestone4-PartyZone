@@ -14,11 +14,15 @@ stripe.api_key = settings.STRIPE_SECRET
 
 @login_required()
 def checkout(request):
+    
+    
     if request.method == "POST":
         order_form = OrderForm(request.POST)
         payment_form = MakePaymentForm(request.POST)
+          
 
         if order_form.is_valid() and payment_form.is_valid():
+            
             order = order_form.save(commit=False)
             order.date = timezone.now()
             order.save()
@@ -45,6 +49,8 @@ def checkout(request):
             except stripe.error.CardError:
                 messages.error(request, "Your card was declined!")
             
+            print(payment_form.errors)
+
             if customer.paid:
                 messages.error(request, "You have successfully paid")
                 request.session['cart'] = {}
@@ -58,6 +64,9 @@ def checkout(request):
         payment_form = MakePaymentForm()
         order_form = OrderForm()
     
+    if messages:
+        print("ghghhghg")
+        
     return render(request, "checkout.html", {"order_form": order_form, "payment_form": payment_form, "publishable": settings.STRIPE_PUBLISHABLE})
 
 

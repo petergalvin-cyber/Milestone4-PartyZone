@@ -9,9 +9,22 @@ def view_cart(request):
 def add_to_cart(request, id):
     """Add a quantity of the specified product to the cart"""
     quantity = int(request.POST.get('quantity'))
-
+    
+    str_x = request.POST.get('select')
     cart = request.session.get('cart', {})
-    cart[id] = cart.get(id, quantity)
+
+    if str_x == "add":
+        
+        if cart.get(id) is not None:
+            temp = cart.get(id)
+            print(temp)
+        else:
+            temp = 0
+
+        cart[id] = quantity + temp
+        print(cart[id])
+    else:
+        cart.pop(id)
 
     request.session['cart'] = cart
     return redirect(reverse('index'))

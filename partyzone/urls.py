@@ -19,6 +19,7 @@ from accounts import urls as urls_accounts
 from products import urls as urls_products
 from products.views import all_products
 from cart import urls as urls_cart
+from checkout import urls as urls_checkout
 from search import urls as urls_search
 from django.views import static
 from .settings import MEDIA_ROOT
