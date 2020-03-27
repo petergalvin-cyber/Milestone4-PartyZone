@@ -6,7 +6,7 @@
 <div class="row">
     {% for item in cart_items %}
     
-    <div class="col-6">
+    <div class = "col-sm-12 col-md-4 col-lg-3">
         
         <div class="card">
             <img class="card-img-top" src='{{ MEDIA_URL }}{{ item.product.image }}'>
@@ -22,8 +22,7 @@
                         <label for="exampleInputAmount" class="sr-only">New Qty</label>
                         <div class="input-group">
                             
-                            <input name="quantity" type="number" min="0" max="999" class="form-control" placeholder="{{item.quantity}}" 
-                            value={{item.quantity}}>
+                            <input name="quantity" type="number" min="0" max="{{product.stock}}" class="form-control" placeholder="{{item.quantity}}" value={{item.quantity}}>
                             
                         </div>
                     
@@ -36,10 +35,8 @@
     {% endfor %}
 </div>
 <div class="row">
-  <div class="col">
-    
-    <p>Total <span> <i class="fa fa-eur" aria-hidden="true"></i></span>{{ total }}</p>
-    <a href="{% url 'checkout' %}" class="btn btn-success" role="button"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>Checkout</a>
+  <div class="col-sm-12 col-md-4 col-lg-3">
+         <a href="{% url 'checkout' %}" class="btn btn-success form-control" role="button"><i class="fa fa-check" aria-hidden="true"></i>  Checkout{{ total }}</a>     
   </div>  
 </div>
 
