@@ -2,8 +2,30 @@
 {% load static from staticfiles %}
 {% load bootstrap_tags %}
 
+{% block search %}
+
+<form action="{% url 'search' %}" class="form-inline my-2 my-lg-0 mr-auto" method="get">
+    
+    <div class="input-group">
+        
+        <select class="custom-select" id="exampleFormControlSelect1" name="q">
+            <option value="">All</option>
+        {% for cat in categories %}
+            <option>{{cat}}</option>
+        {% endfor %}
+    </select>
+    </div>
+    <div class="input-group-append">
+        <button class="form-group form-control btn btn-primary" type="search">Search</button>
+    </div>
+</form>
+
+{% endblock %}
+
+
+
 {% block content %}
-<div class="row">
+<div class="row mt-2">
     {% for item in cart_items %}
     
     <div class = "col-xs-12 col-md-4 col-lg-3">
@@ -26,7 +48,7 @@
                             
                         </div>
                     
-                    <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Amend</button>
+                    <button type="submit" class="btn btn-primary"><i class="fa fa-pencil" aria-hidden="true"></i> Amend</button>
                 </form>
             
           </div>  
@@ -36,7 +58,7 @@
 </div>
 <div class="row">
   <div class="col-sm-12 col-md-4 col-lg-3">
-         <a href="{% url 'checkout' %}" class="btn btn-success form-control" role="button"><i class="fa fa-check" aria-hidden="true"></i>  Checkout{{ total }}</a>     
+         <a href="{% url 'checkout' %}" class="btn btn-success form-control" role="button">Checkout <i class="fa fa-eur" aria-hidden="true"></i>{{ total }}</a>     
   </div>  
 </div>
 

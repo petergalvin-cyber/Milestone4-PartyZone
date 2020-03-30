@@ -1,9 +1,11 @@
 from django.shortcuts import render, redirect, reverse
+from products.models import Theme
 
 # Create your views here.
 def view_cart(request):
     """A View that renders the cart contents page"""
-    return render(request, "cart.html")
+    categories = Theme.objects.all()
+    return render(request, "cart.html", {"categories": categories})
 
 
 def add_to_cart(request, id):

@@ -2,14 +2,9 @@
 
 {% block search %}
 
-  
 <form action="{% url 'search' %}" class="form-inline my-2 my-lg-0 mr-auto" method="get">
-    <!--
-    <input type="text" name="q">
-    <button type="search">Search</button>
-    -->
+    
     <div class="input-group">
-        <!--<label class="input-group-text" for="exampleFormControlSelect1">Select Category</label> -->
         
         <select class="custom-select" id="exampleFormControlSelect1" name="q">
             <option value="">All</option>
@@ -23,11 +18,10 @@
     </div>
 </form>
 
-
 {% endblock %}
 
 {% block content %}
-<div class="row main-display mt-2">
+<div class="row mt-2">
  
        {% for product in products %}
         <div class = "col-xs-12 col-md-4 col-lg-3 mb-2">
