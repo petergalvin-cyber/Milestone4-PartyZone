@@ -3,7 +3,7 @@
 
 body {
     font-family: 'Londrina Solid', cursive;
-    background-color:white;
+        background-color: #f1e207
     /* padding-top: 100px; */
 }
 
@@ -21,4 +21,8 @@ footer {
 
 .accountform {
     padding-top: 20px;
+}
+
+.card-display {
+    background-color: hsla(0, 6%, 79%, 0.884)
 }

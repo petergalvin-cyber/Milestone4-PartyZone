@@ -9,41 +9,31 @@
     <button type="search">Search</button>
     -->
     <div class="input-group">
-        <label class="input-group-text" for="exampleFormControlSelect1">Select Category</label>
+        <!--<label class="input-group-text" for="exampleFormControlSelect1">Select Category</label> -->
         
         <select class="custom-select" id="exampleFormControlSelect1" name="q">
-        <option value="">All</option>
+            <option value="">All</option>
         {% for cat in categories %}
-        <option>{{cat}}</option>
+            <option>{{cat}}</option>
         {% endfor %}
     </select>
     </div>
-    
-    <button class="form-group form-control btn btn-primary" type="search">Search</button>
+    <div class="input-group-append">
+        <button class="form-group form-control btn btn-primary" type="search">Search</button>
+    </div>
 </form>
 
-<div class="input-group mb-3">
-  <div class="input-group-prepend">
-    <label class="input-group-text" for="inputGroupSelect01">Categories</label>
-  </div>
-  <select class="custom-select" id="inputGroupSelect01">
-    <option selected>Choose...</option>
-    <option value="1">One</option>
-    <option value="2">Two</option>
-    <option value="3">Three</option>
-  </select>
-</div>
 
 {% endblock %}
 
 {% block content %}
-<div class="row">
+<div class="row main-display mt-2">
  
        {% for product in products %}
-        <div class = "col-xs-12 col-md-4 col-lg-3">
-             <div class="card mb-0 h-100">
+        <div class = "col-xs-12 col-md-4 col-lg-3 mb-2">
+             <div class="card mb-0 h-100 border border-dark">
                     <img class="card-img-top" src='{{ MEDIA_URL }}{{ product.image }}'>
-                <div class="card-body">
+                <div class="card-body card-display">
                     
                     <h3 class="card-title">{{ product.name }}</h3>
                     <p class="card-text">{{ product.description }}</p>

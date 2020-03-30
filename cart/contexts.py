@@ -18,8 +18,7 @@ def cart_contents(request):
     y = cart.values()
     print(cart.items())
     print(y)
-    print(cart['5'])
-    print(cart.get('3','Error'))
+  
 
     for id, quantity in cart.items():
         
