@@ -14,6 +14,13 @@ def cart_contents(request):
     product_count = 0
     cartIDS = []
 
+    print(cart.keys())
+    y = cart.values()
+    print(cart.items())
+    print(y)
+    print(cart['5'])
+    print(cart.get('3','Error'))
+
     for id, quantity in cart.items():
         
         product = get_object_or_404(Product, pk=id)

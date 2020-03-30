@@ -23,6 +23,7 @@
     
 </head>
 <body>
+
     <!-- Fixed masthead -->
     <nav class="navbar navbar-expand-md navbar-light" style="background-color: #d00c27">
         
@@ -57,10 +58,17 @@
                     {% endif %}
                         
                 </ul>
+                {% block search %}
+                {% endblock %}
+                <!--
                 <form action="{% url 'search' %}" method="get">
                         <input type="text" name="q">
                         <button type="search">Search</button>
+                        {% if categories %}
+                            <h1>This</h1>
+                        {% endif %}
                 </form>
+                -->
             </div>
         
     </nav>
