@@ -53,6 +53,8 @@ def checkout(request):
 
             if customer.paid:
                 messages.error(request, "You have successfully paid")
+                product.stock = product.stock - quantity
+                product.save()
                 request.session['cart'] = {}
                 return redirect(reverse('products'))
             else:

@@ -11,7 +11,7 @@ footer {
     margin-top: 40px;
     padding-top: 40px;
     padding-bottom: 40px;
-    border-top: 1px solid #ededed;
+    /* border-top: 1px solid #ededed; */
     color: #A9A9A9;
 }
 
@@ -27,8 +27,11 @@ footer {
     background-color: hsla(0, 6%, 79%, 0.884)
 }
 
+.border-style {
+border-bottom: 5px solid #0000;
 
-.header-style {
-    
+}
+
+.header-style { 
     font-size: 300%
 }

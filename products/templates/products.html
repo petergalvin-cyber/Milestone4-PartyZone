@@ -9,7 +9,8 @@
         <select class="custom-select" id="exampleFormControlSelect1" name="q">
             <option value="">All</option>
         {% for cat in categories %}
-            <option>{{cat}}</option>
+            <option value={{cat}} {% if cat|upper == sel_cat|upper %} selected{% endif %}>{{cat}}</option>
+            
         {% endfor %}
     </select>
     </div>
@@ -22,7 +23,7 @@
 
 {% block content %}
 <div class="row mt-2">
- 
+    
        {% for product in products %}
         <div class = "col-xs-12 col-md-4 col-lg-3 mb-2">
              <div class="card mb-0 h-100 border border-dark">
@@ -30,7 +31,8 @@
                 <div class="card-body card-display">
                     
                     <h3 class="card-title">{{ product.name }}</h3>
-                    <p class="card-text">{{ product.description }}</p>
+                    <p class="card-text">{{ product.description }}{% if product.stock <= 5 %} <br> 
+                            Only {{product.stock}} left! {% endif %}</p>
                     <p>Price: <i class="fa fa-eur" aria-hidden="true"></i>{{ product.price }}</p>
 
                     <form method="post" action="{% url 'add_to_cart' product.id %}">
