@@ -13,6 +13,7 @@ class Product(models.Model):
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
     stock = models.IntegerField()
+    stock_alert = models.IntegerField(default=0)
     image = models.ImageField(upload_to='images')
     category = models.ForeignKey(Theme, null=True)
 

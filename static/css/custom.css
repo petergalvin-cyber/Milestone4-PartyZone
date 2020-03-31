@@ -12,7 +12,8 @@ footer {
     padding-top: 40px;
     padding-bottom: 40px;
     /* border-top: 1px solid #ededed; */
-    color: #A9A9A9;
+    background-color: Red;
+    color: black;
 }
 
 .icon-bar {
@@ -32,6 +33,14 @@ border-bottom: 5px solid #0000;
 
 }
 
+.prod-alert{
+    color: red;
+}
+
 .header-style { 
+    font-size: 300%
+}
+
+.footer-style { 
     font-size: 300%
 }
