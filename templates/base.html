@@ -33,11 +33,11 @@
 
             {% if product_count > 0 %}
                 <a button class="btn btn-primary" href="{% url 'view_cart' %}">
-                <i class="fa fa-shopping-cart"></i> Cart {{ product_count }}
+                <i class="fa fa-shopping-cart fa-2x"></i><h6> Cart {{ product_count }}</h6>
                 </button></a>
                 {% else %}
                 <a button class="btn" href="{% url 'view_cart' %}">
-                <i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart {{ product_count }}
+                <i class="fa fa-shopping-cart"></i> Cart {{ product_count }}
                 </button>
                 </a>
             {% endif %}
@@ -118,7 +118,7 @@
         <div class="col-lg-6 h-100 text-center text-lg-left">
           
             <h2><i class="fa fa-truck"></i>  Order before 12pm to Guarantee next day delivery</h2>
-            <p>Costumes for Halloween, Birthday, Stag, Hen or any excuse for a party! Dress up, let your hair down, let PartyZone do all the creative work for you.</p> 
+            <p>Costumes for Halloween, Birthday, Stag or Hen. We have costumes to suit any party! Dress up, let your hair down and let PartyZone do all the creative work for you.</p> 
           
         </div>
 
