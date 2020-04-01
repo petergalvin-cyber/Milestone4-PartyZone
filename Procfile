@@ -1,1 +1,1 @@
-web: gunicorn Milestone4-PartyZone.wsgi:application
+web: gunicorn partyzone.wsgi:application
