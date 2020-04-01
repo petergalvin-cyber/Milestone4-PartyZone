@@ -22,9 +22,10 @@ def add_to_cart(request, id):
             print(temp)
         else:
             temp = 0
-
-        cart[id] = quantity + temp
-        print(cart[id])
+            
+        if quantity > 0:
+            cart[id] = quantity + temp
+            print(cart[id])
     else:
         cart.pop(id)
 
