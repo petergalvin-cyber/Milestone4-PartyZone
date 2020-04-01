@@ -21,6 +21,9 @@
 {% endblock %}
 
 {% block content %}
+<div class="row">
+    <h1>{% if sel_cat is null%}All {% else %}{{sel_cat}} {% endif %}Products</h1>
+</div>
 <div class="row mt-2">
     
        {% for product in products %}
