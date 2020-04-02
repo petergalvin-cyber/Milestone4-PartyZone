@@ -8,7 +8,7 @@ def cart_contents(request):
     every page
     """
     cart = request.session.get('cart', {})
-
+    sel_cat = request.session.get('sel_cat', "")
     cart_items = []
     total = 0
     product_count = 0
@@ -22,5 +22,6 @@ def cart_contents(request):
         product_count += quantity
         cartIDS.append(int(id))
         cart_items.append({'id': id, 'quantity': quantity, 'product': product})
-    
-    return {"cartIDS": cartIDS, 'cart_items': cart_items, 'total': total, 'product_count': product_count}
+        
+    # add sel_cat to the return list
+    return {"cartIDS": cartIDS, 'cart_items': cart_items, 'total': total, 'product_count': product_count, 'sel_cat': sel_cat}
