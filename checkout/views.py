@@ -66,8 +66,7 @@ def checkout(request):
         payment_form = MakePaymentForm()
         order_form = OrderForm()
     
-    if messages:
-        print("ghghhghg")
+    
         
     return render(request, "checkout.html", {"order_form": order_form, "payment_form": payment_form, "publishable": settings.STRIPE_PUBLISHABLE})
 
