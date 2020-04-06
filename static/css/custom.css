@@ -1,10 +1,24 @@
 
 @import url('https://fonts.googleapis.com/css?family=Londrina+Solid&display=swap');
 
-body {
+html, body {
     font-family: 'Londrina Solid', cursive;
-        background-color: #f1e207
+    background-color: #f1e207;
+    height: 100vh
     /* padding-top: 100px; */
+}
+
+#nav-id {
+    flex-shrink: none;
+}
+
+#content-id {
+  flex: 1 0 auto;
+  
+}
+
+#sticky-footer {
+    flex-shrink: none;
 }
 
 footer {
@@ -44,3 +58,5 @@ border-bottom: 5px solid #0000;
 .footer-style { 
     font-size: 300%
 }
+
+
