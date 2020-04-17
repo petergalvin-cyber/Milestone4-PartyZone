@@ -1,9 +1,9 @@
 
-@import url('https://fonts.googleapis.com/css?family=Londrina+Solid&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Londrina+Solid:wght@300&display=swap');
 
 html, body {
     font-family: 'Londrina Solid', cursive;
-    background-color: #f1e207;
+    background-color: white;
     height: 100vh
     /* padding-top: 100px; */
 }
@@ -25,8 +25,7 @@ footer {
     margin-top: 40px;
     padding-top: 40px;
     padding-bottom: 40px;
-    /* border-top: 1px solid #ededed; */
-    background-color: Red;
+    background-color: #6d589e;
     color: black;
 }
 
