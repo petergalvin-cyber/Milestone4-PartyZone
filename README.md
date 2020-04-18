@@ -16,6 +16,12 @@ The user must be logged in to complete the purchase and is automatically redirec
 
 The NavBar has simple (Registration, Login) or (Profile, Logout) options displayed depending on the login status. It also contains a search costumes by category function. For a larger costume database a text search would be added. 
 
+### Wireframes
+The design philosophy was to let the products speak for themselves and the products feature prominently with easy access. The text style and description yield a fun and cartoonish sensation. The Navbar is purple to attract attention but does not detract from the products or text. The Navbar and footer formats are consistent across all applications which makes navigation simpler.
+  * [Products_Page](Readme/wireframes/Products.jpeg)
+  * [Cart_Page](Readme/wireframes/Cart.jpeg)
+  * [CheckOut_Page](Readme/wireframes/CheckOut.jpeg)
+
 # Features
 The site is broken into various components using Django create application.
 
