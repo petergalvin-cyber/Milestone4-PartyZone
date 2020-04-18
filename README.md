@@ -96,7 +96,7 @@ Travis Integration testing was attempted but was abandoned after it rejected ver
 # Deployment
 
 ## Hosting
-The project is hosted (partysupplies.herokuapp.com) on Heroku with media (images and css) files sitting in AWS S3 buckets because static files have limited supported in Heroku.
+The project is hosted (https://partysupplies.herokuapp.com) on Heroku with media (images and css) files sitting in AWS S3 buckets because static files have limited supported in Heroku.
 
 To host the program in Heroku the following keys had to be entered in the CONFIG page since this information is not uploaded to Github.
 1. Postgres SQL URL: This is the URL link to the Postgres database. The URL is created by Heroku CONFIG VARS section and entered into `settings.py` file of the application to enable data to be accessed by Heroku.
