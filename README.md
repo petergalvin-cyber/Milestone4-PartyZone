@@ -112,7 +112,7 @@ Create Procfile in the root directory containing the following: "web: gunicorn p
 
 
 ## Deploy locally
-The code is repositied at the following location in Github: https://petergalvin-cyber.github.io/Milestone4-PartyZone/. Download the zip file on Github and unzip to your local Django workspace.
+The code is repositied at the following location in Github: https://github.com/petergalvin-cyber/Milestone4-PartyZone. Download the zip file on Github and unzip to your local Django workspace.
 
 Copy the application directories across and copy the root `url.py and the root settings.py` file to your local directory. 
 The `settings.py files contains the linkages to AWS and the urls.py` contain url links to the applications. If AWS is not desired then use your own default `settings.py` file but update it to include the imported applications.
